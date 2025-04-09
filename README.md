@@ -1,4 +1,4 @@
-🌱 Jogo das Escolhas Educativo: Aventura pelo Rio Iguaçu
+**🌱 Jogo das Escolhas Educativo: Aventura pelo Rio Iguaçu**
 
 Um jogo educativo e interativo sobre consciência ambiental para crianças, com foco no Rio Iguaçu.
 🎮 Sobre o Jogo
@@ -44,7 +44,7 @@ Durante o jogo, a criança poderá explorar e aprender sobre:
 
     🤔 Curiosidades e Fatos Interessantes
 
-💡 Como Funciona
+**💡 Como Funciona**
 
     A cada partida, o jogador é apresentado a situações e dilemas ambientais.
 
@@ -52,7 +52,7 @@ Durante o jogo, a criança poderá explorar e aprender sobre:
 
     O jogo muda a cada vez, incentivando múltiplas jogadas para explorar caminhos diferentes.
 
-👶 Público-Alvo
+**👶 Público-Alvo**
 
 Crianças e pré-adolescentes (8 a 14 anos), com linguagem acessível, visual amigável e foco em educação ambiental interativa.
 🚧 Em Desenvolvimento
