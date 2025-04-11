@@ -11,53 +11,6 @@
   font-family: 'Jersey 15', sans-serif;
 }
 
-/* Estilos adicionais */
-.game-container {
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.game-section {
-  padding: 3rem 0;
-  width: 50%;
-  margin: 0 auto;
-}
-
-.game-title {
-  font-size: 2.5rem;
-  color: #10B981;
-  margin-bottom: 0.5rem;
-}
-
-.game-description {
-  font-size: 1.25rem;
-  color: white;
-  max-width: 42rem;
-  margin: 0 auto;
-}
-
-.game-option {
-  text-align: center;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 0.5rem;
-  padding: 3rem 0;
-  width: 50%;
-  margin: 0 auto;
-}
-
-.game-option-title {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.game-image {
-  width: 50%;
-  margin: 0 auto;
-}
-
 /*
 Classes Utilitárias do Tailwind
 Além das classes personalizadas, o projeto utiliza várias classes utilitárias do Tailwind CSS:
