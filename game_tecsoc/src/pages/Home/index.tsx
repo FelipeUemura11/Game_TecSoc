@@ -1,18 +1,55 @@
 import { FC } from 'react';
-
-const Home:FC = () => {
+import background_paisagem from '../../assets/background_paisagem.png';
+import player1 from '../../assets/player1.png';
+import { Link } from 'react-router-dom';
+const Home: FC = () => {
   return (
-    <div className="space-y-8">
-      <section className="text-center py-12">
-        <h1 className="text-4x1 font-bold text-gray-900 mb-4">
-          Bem-vindo ao GameTecSoc
-        </h1>
-        <p className="text -x1 text-gray-600 max-w-2x1 mx-auto">
-          Descubra os melhores jogos e mergulhe no universo dos games!
-        </p>
+    <div
+      className="relative game-container"
+      style={{
+        backgroundImage: `url(${background_paisagem})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: 'calc(auto - 5rem)', // ajusta conforme altura do seu header/footer
+        paddingTop: '1rem',
+      }}
+    >
+      {/* Conteúdo principal */}
+      <section className="flex justify-center items-center min-h-screen px-4 py-6">
+        <div className="flex flex-col items-center space-y-4 z-10">
+          <div
+            className="text-center p-6 rounded-lg"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4))',
+              boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
+            }}
+          >
+            <h2 className="text-3xl font-jersey text-green-400 mb-6">Bem-vindo ao GameTecSoc</h2>
+            <div className="flex flex-col space-y-3">
+              <Link to="/game" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors">
+                Jogar
+              </Link>
+              <Link to="/about" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors">
+                Sobre
+              </Link>
+              <Link to="/settings" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors">
+                Configurações
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
+
+      {/* Player1 colado na direita e embaixo */}
+      <img
+        src={player1}
+        alt="player1"
+        className="absolute right-0 bottom-0 w-64 h-auto"
+      />
     </div>
-  )
-}
+
+  );
+};
 
 export default Home;

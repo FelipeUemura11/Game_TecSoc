@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 const About:FC = () => {
   return (
@@ -103,10 +104,12 @@ const About:FC = () => {
           <p className="text-xl mb-8">
             Junte-se a nós nesta jornada de descobertas e aprendizado!
           </p>
-          <button className="bg-white text-green-600 px-8 py-3 rounded-full font-bold 
-                           hover:bg-green-100 transition-colors duration-300">
-            Começar Agora
-          </button>
+          <Link to="/">
+            <button className="bg-white text-green-600 px-8 py-3 rounded-full font-bold 
+                            hover:bg-green-100 transition-colors duration-300">
+              Começar Agora
+            </button>
+          </Link>
         </div>
       </section>
     </div>

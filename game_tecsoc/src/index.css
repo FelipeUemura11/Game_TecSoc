@@ -1,1 +1,169 @@
+/* Estilos personalizados para o GameTecSoc */
+
+/* Importação de fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+/* Importação do Tailwind CSS */
 @import "tailwindcss";
+
+/* Classe de fonte personalizada */
+.font-jersey {
+  font-family: 'Jersey 15', sans-serif;
+}
+
+/* Estilos adicionais */
+.game-container {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.game-section {
+  padding: 3rem 0;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  color: #10B981;
+  margin-bottom: 0.5rem;
+}
+
+.game-description {
+  font-size: 1.25rem;
+  color: white;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.game-option {
+  text-align: center;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0.5rem;
+  padding: 3rem 0;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.game-option-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.game-image {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/*
+Classes Utilitárias do Tailwind
+Além das classes personalizadas, o projeto utiliza várias classes utilitárias do Tailwind CSS:
+
+
+min-h-screen
+  Função: Define a altura mínima como 100% da viewport
+  Equivalente CSS: min-height: 100vh;
+
+bg-cover
+  Função: Define o tamanho da imagem de fundo para cobrir todo o container
+  Equivalente CSS: background-size: cover;
+
+bg-center
+  Função: Centraliza a imagem de fundo
+  Equivalente CSS: background-position: center;
+  
+bg-no-repeat
+  Função: Impede que a imagem de fundo se repita
+  Equivalente CSS: background-repeat: no-repeat;
+
+space-y-8
+  Função: Adiciona espaço vertical entre elementos filhos
+  Equivalente CSS: margin-top: 2rem; (aplicado a todos os elementos exceto o primeiro)
+
+pt-10
+  Função: Adiciona padding no topo
+  Equivalente CSS: padding-top: 2.5rem;
+
+relative
+  Função: Define o posicionamento como relativo
+  Equivalente CSS: position: relative;
+
+z-10
+  Função: Define a ordem de empilhamento (z-index)
+  Equivalente CSS: z-index: 10;
+
+text-center
+  Função: Alinha o texto ao centro
+  Equivalente CSS: text-align: center;
+  
+py-12
+  Função: Adiciona padding no topo e na base
+  Equivalente CSS: padding-top: 3rem; padding-bottom: 3rem;
+
+bg-white/60
+  Função: Define a cor de fundo como branco com 60% de opacidade
+  Equivalente CSS: background-color: rgba(255, 255, 255, 0.6);
+w-1/2
+  Função: Define a largura como 50%
+  Equivalente CSS: width: 50%;
+
+mx-auto
+  Função: Centraliza horizontalmente
+  Equivalente CSS: margin-left: auto; margin-right: auto;
+
+rounded-lg
+  Função: Arredonda os cantos
+  Equivalente CSS: border-radius: 0.5rem;
+
+text-4xl
+  Função: Define o tamanho da fonte como extra grande
+  Equivalente CSS: font-size: 2.25rem;
+
+text-green-500
+  Função: Define a cor do texto como verde
+  Equivalente CSS: color: #10B981;
+
+mb-2
+  Função: Adiciona margem na base
+  Equivalente CSS: margin-bottom: 0.5rem;
+
+text-xl
+  Função: Define o tamanho da fonte como extra large
+  Equivalente CSS: font-size: 1.25rem;
+
+text-white
+  Função: Define a cor do texto como branco
+  Equivalente CSS: color: white;
+
+max-w-2xl
+  Função: Define a largura máxima
+  Equivalente CSS: max-width: 42rem;
+
+flex
+  Função: Define o display como flex
+  Equivalente CSS: display: flex;
+
+flex-col
+  Função: Define a direção do flex como coluna
+  Equivalente CSS: flex-direction: column;
+
+items-center
+  Função: Alinha os itens ao centro no eixo transversal
+  Equivalente CSS: align-items: center;
+
+justify-center
+  Função: Alinha os itens ao centro no eixo principal
+  Equivalente CSS: justify-content: center;
+
+text-2xl
+  Função: Define o tamanho da fonte como 2xl
+  Equivalente CSS: font-size: 1.5rem;
+
+w-1/2
+  Função: Define a largura como 50%
+  Equivalente CSS: width: 50%;
+
+*/
