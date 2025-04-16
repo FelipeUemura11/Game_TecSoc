@@ -2,17 +2,17 @@ import { FC } from 'react';
 import background_paisagem from '../../assets/background_paisagem.png';
 import player1 from '../../assets/player1.png';
 import { Link } from 'react-router-dom';
+
 const Home: FC = () => {
   return (
-    <div
-      className="relative game-container"
-      style={{
+    <div 
+      className="relative min-h-screen"
+      style={{ 
         backgroundImage: `url(${background_paisagem})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        minHeight: 'calc(auto - 5rem)', // ajusta conforme altura do seu header/footer
-        paddingTop: '1rem',
+        backgroundAttachment: 'fixed'
       }}
     >
       {/* Conteúdo principal */}
@@ -48,7 +48,6 @@ const Home: FC = () => {
         className="absolute right-0 bottom-0 w-64 h-auto"
       />
     </div>
-
   );
 };
 
