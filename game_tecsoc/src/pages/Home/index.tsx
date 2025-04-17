@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Home: FC = () => {
   return (
     <div 
-      className="relative min-h-screen"
+      className="relative min-h-screen game-container"
       style={{ 
         backgroundImage: `url(${background_paisagem})`,
         backgroundSize: 'cover',
