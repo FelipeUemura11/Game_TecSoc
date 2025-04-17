@@ -1,6 +1,6 @@
 **🌱 Jogo das Escolhas Educativo: Aventura pelo Rio Iguaçu**
 
-Um jogo educativo e interativo sobre consciência ambiental para crianças, com foco no Rio Iguaçu.
+Um jogo educativo e interativo sobre consciência ambiental para adolescentes de uma escola publica, com foco no Rio Iguaçu.
 🎮 Sobre o Jogo
 
 Neste jogo de escolhas, a criança embarca em uma jornada interativa pelo Rio Iguaçu, fazendo decisões que afetam o destino do meio ambiente, da fauna, da flora e das comunidades ao longo do caminho.
