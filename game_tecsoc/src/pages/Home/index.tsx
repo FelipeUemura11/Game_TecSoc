@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import background_paisagem from '../../assets/background_paisagem.png';
+import cataratas from '../../assets/cataratas.png';
 import player1 from '../../assets/player1.png';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ const Home: FC = () => {
     <div 
       className="relative min-h-screen game-container"
       style={{ 
-        backgroundImage: `url(${background_paisagem})`,
+        backgroundImage: `url(${cataratas})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -27,7 +27,7 @@ const Home: FC = () => {
           >
             <h2 className="text-3xl font-jersey text-green-400 mb-6">Bem-vindo ao GameTecSoc</h2>
             <div className="flex flex-col space-y-3">
-              <Link to="/game" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors">
+              <Link to="/fases" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors">
                 Jogar
               </Link>
               <Link to="/about" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors">
@@ -45,7 +45,7 @@ const Home: FC = () => {
       <img
         src={player1}
         alt="player1"
-        className="absolute right-0 bottom-0 w-64 h-auto"
+        className="absolute right-0 bottom-0 w-100 h-auto"
       />
     </div>
   );

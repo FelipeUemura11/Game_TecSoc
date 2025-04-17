@@ -4,13 +4,16 @@ import logo from '../../assets/LOGO.png';
 
 const Header:FC = () => {
   return (
-    <header className="bg-gradient-to-r from-black to-gray-800 shadow-lg">
+    <header className="bg-gradient-to-r from-green-600 to-green-400 shadow-lg">
         <nav className="container mx-auto px-5 py-5">
             <div className="flex items-center justify-between">
                 <Link
                 to="/"
-                className="text-2xl font-jersey text-white hover:text-green-200 transition-colors">
+                className="flex items-center gap-3 text-2xl font-jersey text-white hover:text-green-200 transition-colors">
                     <img src={logo} alt="logo" className="w-15 h-auto"/>
+                    <h1 className="text-white text-4xl font-jersey">
+                        GameTecSoc
+                    </h1>
                 </Link>
 
                 <ul className="flex space-x-10">
@@ -23,16 +26,16 @@ const Header:FC = () => {
                     </li>
                     <li>
                         <Link
-                        to="/about"
+                        to="/fases"
                         className="text-white hover:text-green-200 transition-colors font-medium">
-                        Sobre
+                        Fases
                         </Link>
                     </li>
                     <li>
                         <Link
-                        to="/contact"
+                        to="/about"
                         className="text-white hover:text-green-200 transition-colors font-medium">
-                        Contato
+                        Sobre
                         </Link>
                     </li>
                 </ul>

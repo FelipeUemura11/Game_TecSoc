@@ -40,16 +40,15 @@ const Fase1:FC = () => {
       <img 
         src={person1} 
         alt="person1" 
-        className="absolute bottom-0 left-300 w-100 h-150 character-appear" 
+        className="absolute bottom-0 right-0 w-auto h-auto character-appear" 
         style={{ zIndex: 10 }} 
       />
-      <div className="absolute bottom-10 left-25 bg-black/70 w-290 h-50 border-2 border-black/85" style={{ zIndex: 10 }}>
+      <div className="absolute bottom-10 left-25 bg-black/70 w-350 h-auto border-2 border-black/85" style={{ zIndex: 10 }}>
         <h2 className="text-white text-xl font-bold"> BALAO DE FALA </h2>
-        <p className="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices dui vitae dignissim scelerisque. Cras arcu tellus, dapibus quis mollis eget, ullamcorper sit amet magna.
-            Praesent vulputate varius sapien, a tempus diam pellentesque at. Phasellus interdum leo eu ante mattis, eu consequat lectus maximus. Proin iaculis justo ultrices mauris hendrerit, sed lacinia metus tristique.
-            Ut nec aliquet enim. Nam eu molestie leo, at lacinia eros. Aliquam erat volutpat. Fusce et eros vel tellus vulputate pretium sit amet et felis.
-            Morbi blandit eget mauris vitae pulvinar. Aenean dictum, ex non blandit elementum, enim est molestie nisl, quis euismod tortor sem eget nisl. Donec molestie tincidunt nunc.
-            In enim tortor, bibendum a lorem ornare, tincidunt blandit sem. Curabitur sagittis enim nibh, a finibus risus luctus eu. Etiam commodo sit amet turpis ac volutpat. </p>
+        <p className="text-white">"Meu Deus... olha a situacao do nosso rio nesta foto. Quando eu era menino, esse rio aqui era um espelho do céu. A gente nadava sem medo, pescava tilápia, dourado, e até tomava água direto dele. Era vida pura correndo entre as margens.
+Mas olha só agora… vê com teus próprios olhos: metade azul, metade ferrugem. Isso aí não é obra da natureza, não, é veneno que tão jogando no nosso rio. É esgoto, é lixo industrial, é descuido. Tudo vindo lá de cima, das cidades grandes, das fábricas que nem olham pra trás pra ver o estrago que deixam.
+Essa água barrenta, avermelhada, não é só feia não — ela mata. Mata peixe, mata planta, mata o futuro da nossa gente. O barco que você tá vendo ali? Quase não pesca mais. E quem vive da pesca tá perdendo tudo.
+É triste, meu filho. O rio tá doente, e se a gente não cuidar dele, logo é a gente que adoece junto." </p>
       </div>
 
     </div>

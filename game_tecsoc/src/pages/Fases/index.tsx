@@ -1,12 +1,13 @@
 import { FC } from 'react';
-import fases from '../../assets/fases.png';
+import jogar from '../../assets/jogar.png';
+import { Link } from 'react-router-dom';
 
-const Game:FC = () => {
+const Fases:FC = () => {
   return (
     <div 
       className="relative min-h-screen game-container"
       style={{ 
-        backgroundImage: `url(${fases})`,
+        backgroundImage: `url(${jogar})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -17,14 +18,16 @@ const Game:FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 gap-6">
 
             {/* FASE 1 */}
-            <div 
-              className="bg-blue-100/50 rounded-2xl w-60 h-36 flex items-center justify-center hover:scale-105 transition-all cursor-pointer"
-              style={{ boxShadow: 'none' }}
-              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 15px 5px rgba(255, 255, 255, 0.5)'}
-              onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
-            >
-              <span className="text-2xl font-bold text-black/70">FASE 1</span>
-            </div>
+            <Link to='/fase1'>
+              <div 
+                className="bg-blue-100/50 rounded-2xl w-60 h-36 flex items-center justify-center hover:scale-105 transition-all cursor-pointer"
+                style={{ boxShadow: 'none' }}
+                onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 15px 5px rgba(255, 255, 255, 0.5)'}
+                onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
+              >
+                <span className="text-2xl font-bold text-black/70">FASE 1</span>
+              </div>
+            </Link>
 
             {/* FASE 2 */}
             <div 
@@ -72,4 +75,4 @@ const Game:FC = () => {
   )
 }
 
-export default Game;
+export default Fases;
