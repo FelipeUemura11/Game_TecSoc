@@ -30,44 +30,52 @@ const Fases:FC = () => {
             </Link>
 
             {/* FASE 2 */}
-            <div 
-              className="bg-blue-100/50 rounded-2xl w-60 h-36 flex items-center justify-center hover:scale-105 transition-all cursor-pointer"
-              style={{ boxShadow: 'none' }}
-              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 15px 5px rgba(255, 255, 255, 0.5)'}
-              onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
-            >
-              <span className="text-2xl font-bold text-black/70">FASE 2</span>
-            </div>
+            <Link to='/fase2'>
+              <div 
+                className="bg-blue-100/50 rounded-2xl w-60 h-36 flex items-center justify-center hover:scale-105 transition-all cursor-pointer"
+                style={{ boxShadow: 'none' }}
+                onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 15px 5px rgba(255, 255, 255, 0.5)'}
+                onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
+              >
+                <span className="text-2xl font-bold text-black/70">FASE 2</span>
+              </div>
+            </Link>
 
             {/* FASE 3 */}
-            <div 
-              className="bg-blue-100/50 rounded-2xl w-60 h-36 flex items-center justify-center hover:scale-105 transition-all cursor-pointer"
-              style={{ boxShadow: 'none' }}
-              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 15px 5px rgba(255, 255, 255, 0.5)'}
-              onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
-            >
-              <span className="text-2xl font-bold text-black/70">FASE 3</span>
-            </div>
+            <Link to='/fase3'>
+              <div 
+                className="bg-blue-100/50 rounded-2xl w-60 h-36 flex items-center justify-center hover:scale-105 transition-all cursor-pointer"
+                style={{ boxShadow: 'none' }}
+                onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 15px 5px rgba(255, 255, 255, 0.5)'}
+                onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
+              >
+                <span className="text-2xl font-bold text-black/70">FASE 3</span>
+              </div>
+            </Link>
 
             {/* FASE 4 */}
-            <div 
-              className="bg-blue-100/50 rounded-2xl w-60 h-36 flex items-center justify-center hover:scale-105 transition-all cursor-pointer"
-              style={{ boxShadow: 'none' }}
-              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 15px 5px rgba(255, 255, 255, 0.5)'}
-              onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
-            >
-              <span className="text-2xl font-bold text-black/70">FASE 4</span>
-            </div>
+            <Link to='/fase4'>
+              <div 
+                className="bg-blue-100/50 rounded-2xl w-60 h-36 flex items-center justify-center hover:scale-105 transition-all cursor-pointer"
+                style={{ boxShadow: 'none' }}
+                onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 15px 5px rgba(255, 255, 255, 0.5)'}
+                onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
+              >
+                <span className="text-2xl font-bold text-black/70">FASE 4</span>
+              </div>
+            </Link>
 
             {/* FASE 5 */}
-            <div 
-              className="bg-blue-100/50 rounded-2xl w-60 h-36 flex items-center justify-center hover:scale-105 transition-all cursor-pointer"
-              style={{ boxShadow: 'none' }}
-              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 15px 5px rgba(255, 255, 255, 0.5)'}
-              onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
-            >
-              <span className="text-2xl font-bold text-black/70">FASE 5</span>
-            </div>
+            <Link to='/fase5'>
+              <div 
+                className="bg-blue-100/50 rounded-2xl w-60 h-36 flex items-center justify-center hover:scale-105 transition-all cursor-pointer"
+                style={{ boxShadow: 'none' }}
+                onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 15px 5px rgba(255, 255, 255, 0.5)'}
+                onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
+              >
+                <span className="text-2xl font-bold text-black/70">FASE 5</span>
+              </div>
+            </Link>
             
           </div>
       </div>
