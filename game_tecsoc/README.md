@@ -1,4 +1,4 @@
-# GameTecSoc
+# GameTecSoc Passo a Passo para executar o projeto 
 
 Um jogo educativo desenvolvido com React e TypeScript.
 
