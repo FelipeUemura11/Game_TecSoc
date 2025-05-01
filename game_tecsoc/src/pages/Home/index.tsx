@@ -20,8 +20,8 @@ const Home: FC = () => {
           }
           @keyframes float3 {
             0% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(100px, 50vh) rotate(180deg); }
-            100% { transform: translate(200px, 100vh) rotate(360deg); }
+            50% { transform: translate(-100px, 50vh) rotate(180deg); }
+            100% { transform: translate(-200px, 100vh) rotate(360deg); }
           }
           @keyframes float4 {
             0% { transform: translate(0, 0) rotate(0deg); }
@@ -52,9 +52,9 @@ const Home: FC = () => {
             z-index: 10;
           }
           .leaf1 { 
-            animation: float1 6s linear infinite;
+            animation: float1 10s linear infinite;
             left: 5%;
-            top: 50%;
+            top: 1%;
           }
           .leaf2 { 
             animation: float2 12s linear infinite;
@@ -62,27 +62,27 @@ const Home: FC = () => {
             top: 1%;
           }
           .leaf3 { 
-            animation: float3 10s linear infinite;
-            left: 20%;
-            top: 3%;
+            animation: float3 7s linear infinite;
+            left: 23%;
+            top: 7%;
           }
           .leaf4 { 
-            animation: float4 23s linear infinite;
-            right: 20%;
+            animation: float4 16s linear infinite;
+            left: 7%;
             top: 30%;
           }
           .leaf5 { 
             animation: float5 17s linear infinite;
-            left: 35%;
-            top: 20%;
+            left: 70%;
+            top: 5%;
           }
           .leaf6 { 
             animation: float6 9s linear infinite;
-            right: 35%;
-            top: 15%;
+            right: 10%;
+            top: 5%;
           }
           .leaf7 { 
-            animation: float7 20s linear infinite;
+            animation: float7 14s linear infinite;
             left: 50%;
             top: 40%;
           }
@@ -118,13 +118,13 @@ const Home: FC = () => {
             >
               <h2 className="text-3xl font-jersey text-green-400 mb-6">Bem-vindo ao GameTecSoc</h2>
               <div className="flex flex-col space-y-3">
-                <Link to="/fases" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors">
+                <Link to="/fases" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors" style={{ zIndex: 10 }}>
                   Jogar
                 </Link>
-                <Link to="/about" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors">
+                <Link to="/about" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors" style={{ zIndex: 10 }}>
                   Sobre
                 </Link>
-                <Link to="/settings" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors">
+                <Link to="/settings" className="text-2xl font-jersey text-white hover:text-green-400 transition-colors" style={{ zIndex: 10 }}>
                   Configurações
                 </Link>
               </div>
