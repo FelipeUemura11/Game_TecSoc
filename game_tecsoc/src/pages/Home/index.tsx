@@ -49,7 +49,7 @@ const Home: FC = () => {
             height: 250px;
             opacity: 0.8;
             pointer-events: none;
-            z-index: 10;
+            z-index: 1;
           }
           .leaf1 { 
             animation: float1 10s linear infinite;
@@ -114,6 +114,8 @@ const Home: FC = () => {
               style={{
                 background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4))',
                 boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
+                position: 'relative',
+                zIndex: 2
               }}
             >
               <h2 className="text-3xl font-jersey text-green-400 mb-6">Bem-vindo ao GameTecSoc</h2>
