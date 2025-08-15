@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import jogar from '../../assets/jogar.png';
+import fases from '../../assets/fases.png';
 import { Link } from 'react-router-dom';
 
 const Fases:FC = () => {
@@ -7,7 +7,7 @@ const Fases:FC = () => {
     <div 
       className="relative min-h-screen game-container"
       style={{ 
-        backgroundImage: `url(${jogar})`,
+        backgroundImage: `url(${fases})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
