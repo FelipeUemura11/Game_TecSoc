@@ -59,6 +59,9 @@ const Fase4:FC = () => {
             "Meu Deus... olha a situacao do nosso rio nesta foto. Quando eu era menino, esse rio aqui era um espelho do céu. A gente nadava sem medo, pescava tilápia, dourado, e até tomava água direto dele. Era vida pura correndo entre as margens.
             Mas olha só agora… vê com teus próprios olhos: metade azul, metade ferrugem. Isso aí não é obra da natureza, não, é veneno que tão jogando no nosso rio."
           </p>
+          <button className="bg-green-600 text-white px-4 py-2 rounded-md">
+            Continuar
+          </button>
         </div>
 
         <div className="absolute bottom-0 right-0 w-1/2 sm:w-1/3 md:w-1/4 max-w-xs" style={{ zIndex: 10 }}>

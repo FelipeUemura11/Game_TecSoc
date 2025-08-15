@@ -4,7 +4,7 @@ import logo from '../../assets/LOGO.png';
 
 const Header:FC = () => {
   return (
-    <header className="bg-gradient-to-r from-green-600 to-green-400 shadow-lg">
+    <header className="bg-gradient-to-b from-green-600 to-green-400 shadow-lg">
         <nav className="container mx-auto px-5 py-5">
             <div className="flex items-center justify-between">
                 <Link
