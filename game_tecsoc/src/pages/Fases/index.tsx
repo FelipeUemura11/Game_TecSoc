@@ -5,7 +5,7 @@ import { loadProgress } from '../../state/progress'; // 2. Importar loadProgress
 import { Lock } from 'lucide-react';
 
 const Fases: FC = () => {
-  const mapaParanaUrl = 'https://i.imgur.com/EXAMPLE.jpg'; // Substitua pela sua URL
+  const mapaParanaUrl = ''; // Substitua pela sua URL
 
   // 3. Criar um estado para guardar as fases desbloqueadas
   const [unlockedPhaseIds, setUnlockedPhaseIds] = useState<string[]>([]);
@@ -29,7 +29,7 @@ const Fases: FC = () => {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/10" />
       <div className="pointer-events-none absolute inset-0 bg-black/30" />
 
-      <div className="relative z-10 flex min-h-dvh flex-col items-center justify-end p-4 pb-12 sm:p-8 sm:pb-20">
+      <div className="relative z-10 flex min-h-dvh flex-col items-center p-4 sm:p-8">
         <header className="text-center mb-8 sm:mb-12">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-lg">
             Selecione a Fase
