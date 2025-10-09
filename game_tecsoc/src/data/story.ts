@@ -1,6 +1,4 @@
 import type { Story } from '../types/story'
-import RioIguacuPoluido from '../assets/RioIguacuPoluido.png'
-import Felipe from '../assets/Felipe.png'
 import cataratas from '../assets/cataratas.png'
 import yara from '../assets/peixe.png'
 import capivara from '../assets/capivara.png'
@@ -9,10 +7,8 @@ import tartaruga from '../assets/tartaruga.png'
 import tatu from '../assets/tatu.png'
 import nascente from '../assets/nascente.jpg'
 import zoologico from '../assets/zoologico.jpg'
-import pedro from '../assets/Pedro.png'
 import represa from '../assets/represa.jpg'
 import ponte from '../assets/pontevitoria.jpg'
-import cataratona from '../assets/cataratas2.jpg'
 
 // Personagens:
 /*
