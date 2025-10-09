@@ -1,40 +1,83 @@
-import { FC } from 'react'
-import { Link } from 'react-router-dom'
-import { story } from '../../data/story'
-import { isPhaseUnlocked } from '../../state/progress'
+import { FC, useState, useEffect } from 'react'; // 1. Importar useState e useEffect
+import { Link } from 'react-router-dom';
+import { story } from '../../data/story';
+import { loadProgress } from '../../state/progress'; // 2. Importar loadProgress em vez de isPhaseUnlocked
+import { Lock } from 'lucide-react';
 
 const Fases: FC = () => {
+  const mapaParanaUrl = 'https://i.imgur.com/EXAMPLE.jpg'; // Substitua pela sua URL
+
+  // 3. Criar um estado para guardar as fases desbloqueadas
+  const [unlockedPhaseIds, setUnlockedPhaseIds] = useState<string[]>([]);
+
+  // 4. Usar useEffect para carregar o progresso do localStorage QUANDO o componente montar
+  useEffect(() => {
+    const progress = loadProgress();
+    setUnlockedPhaseIds(progress.unlockedPhaseIds);
+  }, []); // O array vazio [] garante que isso só roda uma vez, quando a página carrega
+
   return (
-    <div className="relative min-h-screen game-container bg-gradient-to-br from-emerald-900 to-emerald-700">
-      <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 w-full max-w-7xl mx-auto px-4">
-          {story.phases.map((p) => {
-            const unlocked = isPhaseUnlocked(p.id)
+    <main
+      className="relative w-full min-h-dvh overflow-hidden text-white"
+      style={{
+        backgroundImage: `url(${mapaParanaUrl})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/10" />
+      <div className="pointer-events-none absolute inset-0 bg-black/30" />
+
+      <div className="relative z-10 flex min-h-dvh flex-col items-center justify-end p-4 pb-12 sm:p-8 sm:pb-20">
+        <header className="text-center mb-8 sm:mb-12">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-lg">
+            Selecione a Fase
+          </h1>
+        </header>
+
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+          {story.phases.map((phase, index) => {
+            // 5. Checar se a fase está desbloqueada usando o estado, não lendo o localStorage toda hora
+            const isUnlocked = unlockedPhaseIds.includes(phase.id);
+
+            if (!isUnlocked) {
+              return (
+                <div
+                  key={phase.id}
+                  className="bg-black/40 rounded-2xl w-36 h-40 sm:w-40 sm:h-44 flex flex-col items-center justify-center p-3 border border-white/10 opacity-60 cursor-not-allowed"
+                  title="Conclua a fase anterior para desbloquear"
+                >
+                  <Lock className="w-10 h-10 text-white/50 mb-3" />
+                  <h2 className="text-base sm:text-lg font-semibold text-white/50 text-center">
+                    {phase.title}
+                  </h2>
+                </div>
+              );
+            }
+
             return (
-              <div key={p.id} className="flex justify-center">
-                {unlocked ? (
-                  <Link to={`/fase/${p.id}`} className="flex justify-center w-full">
-                    <div
-                      className="bg-white/10 backdrop-blur rounded-2xl w-full max-w-[240px] h-32 sm:h-36 flex items-center justify-center hover:scale-105 transition-all cursor-pointer border border-white/20"
-                    >
-                      <span className="text-xl sm:text-2xl font-bold text-white drop-shadow">{p.title}</span>
-                    </div>
-                  </Link>
-                ) : (
-                  <div
-                    className="bg-black/30 rounded-2xl w-full max-w-[240px] h-32 sm:h-36 flex items-center justify-center border border-white/10 opacity-60"
-                    title="Conclua a fase anterior para desbloquear"
-                  >
-                    <span className="text-xl sm:text-2xl font-bold text-white/60">{p.title}</span>
+              <Link
+                key={phase.id}
+                to={`/fase/${phase.id}`}
+                className="group rounded-2xl w-36 h-40 sm:w-40 sm:h-44 transition-all duration-300 hover:scale-105"
+              >
+                <div className="relative w-full h-full bg-white/10 backdrop-blur-md rounded-2xl p-3 flex flex-col justify-between items-center border border-white/20 shadow-lg transition-all duration-300 group-hover:bg-white/20 group-hover:border-white/30">
+                  <div className="absolute -top-3 -left-3 w-10 h-10 flex items-center justify-center rounded-full bg-emerald-500 text-white font-bold text-xl border-2 border-white/50 shadow-md">
+                    {index + 1}
                   </div>
-                )}
-              </div>
-            )
+                  <div />
+                  <h2 className="text-base sm:text-lg font-semibold text-white text-center drop-shadow-md">
+                    {phase.title}
+                  </h2>
+                </div>
+              </Link>
+            );
           })}
         </div>
       </div>
-    </div>
-  )
-}
+    </main>
+  );
+};
 
-export default Fases
+export default Fases;

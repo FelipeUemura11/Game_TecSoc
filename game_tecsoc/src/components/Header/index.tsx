@@ -1,48 +1,71 @@
-import { FC } from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png';
+// Arquivo: src/components/Header.tsx (atualizado)
 
-const Header:FC = () => {
+import { FC } from 'react'
+import { NavLink } from 'react-router-dom' // Usando NavLink para estilo ativo
+import logo from '../../assets/logo.png'
+
+const Header: FC = () => {
+  const activeLinkStyle = {
+    color: '#4ade80', // green-400
+    textDecoration: 'underline',
+  }
+
   return (
-    <header className="bg-gradient-to-b from-green-600 to-green-400 shadow-lg">
-        <nav className="container mx-auto px-5 py-5">
-            <div className="flex items-center justify-between">
-                <Link
-                to="/"
-                className="flex items-center gap-3 text-2xl font-jersey text-white hover:text-green-200 transition-colors">
-                    <img src={logo} alt="logo" className="w-15 h-auto"/>
-                    <h1 className="text-white text-4xl font-jersey">
-                        GameTecSoc
-                    </h1>
-                </Link>
+    <header className="sticky top-0 z-50 bg-gray-900/70 backdrop-blur-md border-b border-white/10 shadow-lg">
+      <nav className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="flex items-center justify-between">
+          <NavLink
+            to="/"
+            className="flex items-center gap-3 text-white transition-opacity hover:opacity-80"
+          >
+            <img src={logo} alt="logo" className="w-12 h-auto" />
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
+              GameTecSoc
+            </h1>
+          </NavLink>
 
-                <ul className="flex space-x-10">
-                    <li>
-                        <Link
-                        to="/"
-                        className="text-white hover:text-green-200 transition-colors font-medium">
-                        Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                        to="/fases"
-                        className="text-white hover:text-green-200 transition-colors font-medium">
-                        Fases
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                        to="/about"
-                        className="text-white hover:text-green-200 transition-colors font-medium">
-                        Sobre
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+          <ul className="flex items-center space-x-4 sm:space-x-8 text-base sm:text-lg">
+            <li>
+              <NavLink
+                to="/"
+                style={({ isActive }) => (isActive ? activeLinkStyle : undefined)}
+                className="text-white hover:text-green-300 transition-colors font-medium"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/fases"
+                style={({ isActive }) => (isActive ? activeLinkStyle : undefined)}
+                className="text-white hover:text-green-300 transition-colors font-medium"
+              >
+                Fases
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/about"
+                style={({ isActive }) => (isActive ? activeLinkStyle : undefined)}
+                className="text-white hover:text-green-300 transition-colors font-medium"
+              >
+                Sobre
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/settings"
+                style={({ isActive }) => (isActive ? activeLinkStyle : undefined)}
+                className="text-white hover:text-green-300 transition-colors font-medium"
+              >
+                Configurações
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
   )
 }
 
-export default Header;
+export default Header
