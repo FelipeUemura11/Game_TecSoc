@@ -2,7 +2,7 @@
 
 import { FC } from 'react'
 import { NavLink } from 'react-router-dom' // Usando NavLink para estilo ativo
-import logo from '../../assets/logo.png'
+import logo from '../../assets/LOGO.png'
 
 const Header: FC = () => {
   const activeLinkStyle = {
