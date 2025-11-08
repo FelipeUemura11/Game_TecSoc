@@ -45,7 +45,7 @@ const Home: FC = () => {
         <section className="relative z-10 flex justify-center items-center min-h-screen p-4">
           <div className="bg-black/50 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl p-8 sm:p-12 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 drop-shadow-lg">
-              Bem-vindo ao GameTecSoc
+              Bem-vindo à Cartilha Interativa!
             </h2>
             <div className="flex flex-col items-center space-y-4">
               <Link

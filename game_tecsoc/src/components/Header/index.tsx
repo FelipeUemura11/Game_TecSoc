@@ -20,7 +20,7 @@ const Header: FC = () => {
           >
             <img src={logo} alt="logo" className="w-12 h-auto" />
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
-              GameTecSoc
+              Cartilha Interativa
             </h1>
           </NavLink>
 

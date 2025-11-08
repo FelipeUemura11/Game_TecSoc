@@ -8,7 +8,7 @@ const About:FC = () => {
       <section className="text-center py-16 bg-gradient-to-r from-green-600 to-green-400">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Sobre o GameTecSoc
+            Sobre a Cartilha Interativa
           </h1>
           <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
             Onde a diversão encontra a consciência ambiental: Uma jornada educativa 
