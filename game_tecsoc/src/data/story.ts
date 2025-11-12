@@ -788,8 +788,8 @@ export const story: Story = {
   ]
 },
 {
-  id: '3',
-  title: 'FASE 3 — Represa no Caminho',
+  id: '4',
+  title: 'FASE 4 — Represa no Caminho',
   startScreenId: 'intro',
   screens: [
     {
@@ -1163,14 +1163,14 @@ export const story: Story = {
       result: { 
         title: 'Fase 3 Concluída — O Rio Interrompido', 
         summary: 'Você conheceu Yara e aprendeu sobre o impacto das barragens nos rios e na vida aquática. A jornada pelo Iguaçu continua...', 
-        nextPhaseId: '4' 
+        nextPhaseId: '5' 
       }
     }
   ]
 },
 {
-  id: '4',
-  title: 'FASE 4 — Ponte Histórica',
+  id: '3',
+  title: 'FASE 3 — Ponte Histórica',
   startScreenId: 'intro',
   screens: [
     {
@@ -1534,7 +1534,7 @@ export const story: Story = {
       result: { 
         title: 'Fase 4 Concluída — O Historiador do Subsolo', 
         summary: 'Você conheceu Richard e aprendeu sobre a vida urbana vista de baixo, os impactos das construções e a resiliência dos pequenos. A jornada final aguarda...', 
-        nextPhaseId: '5' 
+        nextPhaseId: '4' 
       }
     }
   ]

@@ -38,7 +38,6 @@ const Fases: FC = () => {
 
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
           {story.phases.map((phase, index) => {
-            // 5. Checar se a fase está desbloqueada usando o estado, não lendo o localStorage toda hora
             const isUnlocked = unlockedPhaseIds.includes(phase.id);
 
             if (!isUnlocked) {
