@@ -788,6 +788,377 @@ export const story: Story = {
   ]
 },
 {
+  id: '3',
+  title: 'FASE 3 — Ponte Histórica',
+  startScreenId: 'intro',
+  screens: [
+    {
+      id: 'intro',
+      title: 'Um Encontro sob o Gigante de Ferro',
+      backgroundUrl: ponte,
+      speaker: 'NARRADOR',
+      texts: [
+        'A noite cai sobre as cidades-gêmeas de União da Vitória e Porto União.',
+        'Sob os arcos da imponente Ponte Machado da Costa, o mundo é feito de sombras e do som constante da água do Rio Iguaçu.',
+        'Perto de um dos pilares, um focinho farejador surge, seguido por uma casca blindada.',
+        'Um Tatu-galinha começa seu forrageio noturno. Ele para ao sentir sua presença.'
+      ],
+      choices: [
+        { label: 'Observar o tatu', toScreenId: 'encontro_richard' }
+      ]
+    },
+    {
+      id: 'encontro_richard',
+      title: 'Richard',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'RICHARD',
+      texts: [
+        'Oh. Olá. Desculpe, eu não esperava companhia.',
+        'Meu nome é Richard. Eu moro aqui, neste solo.',
+        'Para mim, a história desta cidade não está nos livros, mas aqui embaixo, nas camadas de terra que eu escavo toda noite.'
+      ],
+      choices: [
+        // Todas as escolhas pulam as reações e vão direto para a próxima cena
+        { label: 'Prazer, Richard. Não quis assustá-lo.', toScreenId: 'rio_zangado' },
+        { label: 'O que a terra conta para você?', toScreenId: 'rio_zangado' },
+        { label: 'É um lugar interessante para se morar.', toScreenId: 'rio_zangado' },
+        { label: 'Um tatu-galinha! Que animal incrível.', toScreenId: 'rio_zangado' }
+      ]
+    },
+    // Telas 'resposta_assustar', 'resposta_terra_conta', 'resposta_interessante', 'resposta_incrivel' REMOVIDAS
+    {
+      id: 'rio_zangado',
+      title: 'O Rio Zangado',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'NARRADOR',
+      texts: [
+        'Richard enfia o focinho na terra e remexe por um instante.',
+        'Enquanto come, ele parece se lembrar de algo, como se o gosto da terra trouxesse memórias.'
+      ],
+      choices: [
+        { label: 'Ouvir Richard', toScreenId: 'richard_cheia' }
+      ]
+    },
+    {
+      id: 'richard_cheia',
+      title: 'A Grande Cheia',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'RICHARD',
+      texts: [
+        'Este solo é diferente. Embaixo da terra seca, existe uma camada grossa de areia.',
+        'Meus avós contaram. Foi de uma vez em que o rio se cansou de ser pequeno e decidiu visitar a cidade inteira.',
+        'Uma "grande cheia". Ele quis mostrar até onde ia seu verdadeiro quintal.'
+      ],
+      choices: [
+        // Todas as escolhas pulam as reações e vão direto para a próxima cena
+        { label: 'Você está falando de uma grande inundação?', toScreenId: 'margens_parede' },
+        { label: 'O rio quis mostrar seu poder, então.', toScreenId: 'margens_parede' },
+        { label: 'Isso deve ter sido aterrorizante para os animais da época.', toScreenId: 'margens_parede' },
+        { label: 'E essas marcas ainda estão aqui, debaixo dos nossos pés?', toScreenId: 'margens_parede' }
+      ]
+    },
+    // Telas 'resposta_inundacao', 'resposta_poder', 'resposta_aterrorizante', 'resposta_marcas' REMOVIDAS
+    {
+      id: 'margens_parede',
+      title: 'As Margens que Viraram Parede',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'NARRADOR',
+      texts: [
+        'Richard caminha até a beira do rio.',
+        'A margem aqui não é de terra fofa, mas de lajotas de concreto e uma parede baixa, uma contenção.'
+      ],
+      choices: [
+        { label: 'Observar', toScreenId: 'richard_concreto' }
+      ]
+    },
+    {
+      id: 'richard_concreto',
+      title: 'Pedra Dura e Estéril',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'RICHARD',
+      texts: [
+        'Depois da grande cheia, os humanos ficaram com medo. E o medo os fez construir isso. Paredes.',
+        'Eles acham que podem colocar o rio em uma caixa.',
+        'Antes, a margem era suave, havia barrancos para eu cavar. Agora... é só pedra dura e estéril.'
+      ],
+      choices: [
+        // Todas as escolhas pulam as reações e vão direto para a próxima cena
+        { label: 'Eles fizeram isso para proteger a cidade, eu imagino.', toScreenId: 'tesouros_nao_alimentam' },
+        { label: 'Então você perdeu sua casa por causa disso?', toScreenId: 'tesouros_nao_alimentam' },
+        { label: 'A margem de um rio é um lugar cheio de vida, não é?', toScreenId: 'tesouros_nao_alimentam' },
+        { label: 'O concreto parece tão fora de lugar aqui.', toScreenId: 'tesouros_nao_alimentam' }
+      ]
+    },
+    // Telas 'resposta_proteger', 'resposta_perdeu_casa', 'resposta_margem_vida', 'resposta_fora_lugar' REMOVIDAS
+    {
+      id: 'tesouros_nao_alimentam',
+      title: 'Tesouros que Não Alimentam',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'NARRADOR',
+      texts: [
+        'Enquanto fareja perto da parede de concreto, Richard cava rapidamente e desenterra algo que brilha: uma tampa de garrafa enferrujada.',
+        'Ele a cheira e a empurra para o lado com desdém.'
+      ],
+      choices: [
+        { label: 'Observar', toScreenId: 'richard_lixo' }
+      ]
+    },
+    {
+      id: 'richard_lixo',
+      title: 'Camadas de Lixo',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'RICHARD',
+      texts: [
+        'Veem? Outro tipo de marca que os humanos deixam.',
+        'Embaixo, a areia da grande cheia. Mais para cima, cacos de vidro e metais enferrujados.',
+        'Eu cavo em busca de vida, de larvas. E encontro o lixo de vocês.',
+        'Tesouros que não alimentam.'
+      ],
+      choices: [
+        // Todas as escolhas pulam as reações e vão direto para a próxima cena
+        { label: 'É triste pensar que o lixo que jogamos fora fica enterrado por tanto tempo.', toScreenId: 'monstro_ruge' },
+        { label: 'Você já se machucou com alguma dessas coisas?', toScreenId: 'monstro_ruge' },
+        { label: 'O solo se tornou um arquivo da nossa poluição.', toScreenId: 'monstro_ruge' },
+        { label: 'É como se vocês tivessem que garimpar pela comida.', toScreenId: 'monstro_ruge' }
+      ]
+    },
+    // Telas 'resposta_enterrado', 'resposta_machucou', 'resposta_arquivo', 'resposta_garimpar' REMOVIDAS
+    {
+      id: 'monstro_ruge',
+      title: 'O Monstro que Ruge em Cima',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'NARRADOR',
+      texts: [
+        'Um caminhão pesado passa pela ponte.',
+        'Toda a estrutura de metal range e vibra.',
+        'Richard se encolhe, esperando o barulho passar.'
+      ],
+      choices: [
+        { label: 'Observar', toScreenId: 'richard_barulho' }
+      ]
+    },
+    {
+      id: 'richard_barulho',
+      title: 'Rio de Metal',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'RICHARD',
+      texts: [
+        'Este é o outro rio. O rio de metal e borracha que corre sobre nós. Ele nunca dorme.',
+        'Suas luzes fortes confundem os insetos noturnos, que são meu alimento.',
+        'A ponte une as cidades de vocês, mas cria um muro mortal para nós.'
+      ],
+      choices: [
+        // Todas as escolhas pulam as reações e vão direto para a próxima cena
+        { label: 'A poluição sonora e luminosa é um problema que nem notamos.', toScreenId: 'ponte_testemunha' },
+        { label: 'O progresso humano muitas vezes ignora a vida selvagem.', toScreenId: 'ponte_testemunha' },
+        { label: 'Deve ser muito estressante viver com esse barulho constante.', toScreenId: 'ponte_testemunha' },
+        { label: 'As estradas são como rios perigosos para vocês.', toScreenId: 'ponte_testemunha' }
+      ]
+    },
+    // Telas 'resposta_poluicao_sonora', 'resposta_progresso', 'resposta_estressante', 'resposta_estradas' REMOVIDAS
+    {
+      id: 'ponte_testemunha',
+      title: 'A Ponte como Testemunha',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'NARRADOR',
+      texts: [
+        'O tatu-galinha olha para cima, para o emaranhado de vigas de ferro.',
+        'Sua irritação parece dar lugar a um respeito relutante.'
+      ],
+      choices: [
+        { label: 'Ouvir', toScreenId: 'richard_ponte' }
+      ]
+    },
+    {
+      id: 'richard_ponte',
+      title: 'Velha Senhora de Ferro',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'RICHARD',
+      texts: [
+        'Mas sabe... eu respeito esta velha senhora de ferro.',
+        'Ela está aqui há muito tempo. Ela viu a "grande cheia".',
+        'Ela me dá um teto, mesmo que barulhento.',
+        'Ela é uma testemunha silenciosa. O que você acha que ela diria se pudesse falar?'
+      ],
+      choices: [
+        // Todas as escolhas pulam as reações e vão direto para a próxima cena
+        { label: 'Talvez ela pedisse mais cuidado com o rio que passa sob ela.', toScreenId: 'vida_espacos_sobrantes' },
+        { label: 'Ela contaria histórias de todos que já a atravessaram.', toScreenId: 'vida_espacos_sobrantes' },
+        { label: 'Acho que ela diria que viu coisas demais.', toScreenId: 'vida_espacos_sobrantes' },
+        { label: 'Talvez ela se sentisse orgulhosa e cansada ao mesmo tempo.', toScreenId: 'vida_espacos_sobrantes' }
+      ]
+    },
+    // Telas 'resposta_cuidado_rio', 'resposta_historias', 'resposta_viu_demais', 'resposta_orgulhosa_cansada' REMOVIDAS
+    {
+      id: 'vida_espacos_sobrantes',
+      title: 'A Vida nos Espaços Sobrantes',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'NARRADOR',
+      texts: [
+        'Richard volta a farejar o chão, movendo-se com eficiência.',
+        'Ele se esgueira por entre uma moita de capim que teima em crescer numa fresta do concreto.'
+      ],
+      choices: [
+        { label: 'Observar', toScreenId: 'richard_frestas' }
+      ]
+    },
+    {
+      id: 'richard_frestas',
+      title: 'Especialistas em Invisibilidade',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'RICHARD',
+      texts: [
+        'Nosso mundo encolheu. Então aprendemos a viver nas sobras. Nas frestas. Embaixo de pontes.',
+        'Nos tornamos especialistas em invisibilidade.',
+        'Mas viver escondido não é a mesma coisa que viver em paz.',
+        'Você acha que os humanos percebem que existimos nesses pequenos bolsões de vida?'
+      ],
+      choices: [
+        // Todas as escolhas pulam as reações e vão direto para a próxima cena
+        { label: 'Acho que a maioria não faz a menor ideia.', toScreenId: 'sabedoria_pequeno' },
+        { label: 'Algumas pessoas sim, as que prestam mais atenção.', toScreenId: 'sabedoria_pequeno' },
+        { label: 'É impressionante como a vida encontra um caminho.', toScreenId: 'sabedoria_pequeno' },
+        { label: 'Talvez se vocês fossem mais vistos, seriam mais respeitados.', toScreenId: 'sabedoria_pequeno' }
+      ]
+    },
+    // Telas 'resposta_nao_ideia', 'resposta_algumas_pessoas', 'resposta_impressionante_vida', 'resposta_mais_vistos' REMOVIDAS
+    {
+      id: 'sabedoria_pequeno',
+      title: 'A Sabedoria de Ser Pequeno',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'NARRADOR',
+      texts: [
+        'Richard para e se senta sobre as patas traseiras.',
+        'Ele parece pequeno e vulnerável sob a imensidão da ponte.'
+      ],
+      choices: [
+        { label: 'Ouvir', toScreenId: 'richard_pequeno' }
+      ]
+    },
+    {
+      id: 'richard_pequeno',
+      title: 'Ser Pequeno',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'RICHARD',
+      texts: [
+        'Eu sou pequeno. Minha vida é cavar, comer insetos, me esconder.',
+        'Eu vejo essas mudanças imensas, as paredes, a poluição, o barulho... e me sinto impotente.',
+        'O que a ação de um ser tão pequeno como eu pode fazer para mudar algo tão grande?'
+      ],
+      choices: [
+        // Todas as escolhas pulam as reações e vão direto para a próxima cena
+        { label: 'Você mantém o solo saudável. Isso já é uma grande coisa.', toScreenId: 'cheiro_chuva' },
+        { label: 'Talvez o seu papel seja ser uma testemunha, um guardião da história.', toScreenId: 'cheiro_chuva' },
+        { label: 'Muitos pequenos juntos podem fazer uma grande mudança.', toScreenId: 'cheiro_chuva' },
+        { label: 'Você sobrevive. E isso, por si só, é um ato de resistência.', toScreenId: 'cheiro_chuva' }
+      ]
+    },
+    // Telas 'resposta_solo_saudavel', 'resposta_testemunha', 'resposta_juntos', 'resposta_sobrevive' REMOVIDAS
+    {
+      id: 'cheiro_chuva',
+      title: 'O Cheiro da Chuva',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'NARRADOR',
+      texts: [
+        'O vento muda, trazendo o cheiro de chuva e de terra molhada.',
+        'Richard levanta o focinho e aspira o ar.'
+      ],
+      choices: [
+        { label: 'Observar', toScreenId: 'richard_chuva' }
+      ]
+    },
+    {
+      id: 'richard_chuva',
+      title: 'Chuva que Traz Sujeira',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'RICHARD',
+      texts: [
+        'A chuva está vindo. Para mim, chuva é vida. Traz as minhocas.',
+        'Mas aqui, ela também traz preocupação.',
+        'Ela lava toda a sujeira da cidade, o óleo dos carros, o lixo das ruas, e joga tudo dentro do rio.',
+        'A chuva que deveria ser limpa se torna uma sopa de poluição.'
+      ],
+      choices: [
+        // Todas as escolhas pulam as reações e vão direto para a próxima cena
+        { label: 'É o ciclo da natureza sendo usado para espalhar a sujeira humana.', toScreenId: 'amanhecer_retirada' },
+        { label: 'Então, para o rio, a chuva se tornou um problema?', toScreenId: 'amanhecer_retirada' },
+        { label: 'Tudo está conectado, não é? A cidade, o rio, o ar...', toScreenId: 'amanhecer_retirada' },
+        { label: 'Existe algo que se possa fazer para a chuva voltar a ser só... chuva?', toScreenId: 'amanhecer_retirada' }
+      ]
+    },
+    // Telas 'resposta_ciclo', 'resposta_problema_chuva', 'resposta_conectado', 'resposta_solucao_chuva' REMOVIDAS
+    {
+      id: 'amanhecer_retirada',
+      title: 'O Amanhecer e a Retirada',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'NARRADOR',
+      texts: [
+        'No horizonte, o céu começa a clarear, anunciando o fim da noite.',
+        'Richard caminha de volta para a entrada de sua toca, um buraco discreto na terra escura.'
+      ],
+      choices: [
+        { label: 'Despedir-se', toScreenId: 'richard_despedida' }
+      ]
+    },
+    {
+      id: 'richard_despedida',
+      title: 'Camadas Mais Gentis',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'RICHARD',
+      texts: [
+        'Minha hora acabou. O sol pertence a vocês. Eu volto para o silêncio da terra.',
+        'Obrigado por me ouvir. É raro que alguém pare para escutar a história que o chão tem para contar.',
+        'Por favor, quando andar pela cidade, lembre-se que você está caminhando sobre muitas outras histórias.',
+        'E ajude a escrever uma camada mais gentil no futuro.'
+      ],
+      choices: [
+        // Todas as escolhas levam para uma tela final consolidada
+        { label: 'Obrigado por compartilhar suas histórias, Richard.', toScreenId: 'final_consolidado' },
+        { label: 'Eu vou prestar mais atenção ao chão sob meus pés.', toScreenId: 'final_consolidado' },
+        { label: 'Sua perspectiva me ensinou muito.', toScreenId: 'final_consolidado' },
+        { label: 'Tenha um bom descanso. O mundo aqui de cima fica aos nossos cuidados.', toScreenId: 'final_consolidado' }
+      ]
+    },
+    // Telas 'final_historias', 'final_atencao', 'final_perspectiva', 'final_cuidados' REMOVIDAS
+    {
+      id: 'final_consolidado',
+      title: 'O Guardião do Subsolo',
+      backgroundUrl: ponte,
+      characterUrl: tatu,
+      speaker: 'RICHARD',
+      texts: [
+        'Fico feliz. As histórias só têm valor quando são compartilhadas.',
+        'Saber que você prestará atenção me faz descansar mais tranquilo.',
+        'Cuidem bem do nosso teto.'
+      ],
+      result: { 
+        title: 'Fase 4 Concluída — O Historiador do Subsolo', 
+        summary: 'Você conheceu Richard e aprendeu sobre a vida urbana vista de baixo, os impactos das construções e a resiliência dos pequenos. A jornada final aguarda...', 
+        nextPhaseId: '4' 
+      }
+    }
+  ]
+},
+{
   id: '4',
   title: 'FASE 4 — Represa no Caminho',
   startScreenId: 'intro',
@@ -1164,377 +1535,6 @@ export const story: Story = {
         title: 'Fase 3 Concluída — O Rio Interrompido', 
         summary: 'Você conheceu Yara e aprendeu sobre o impacto das barragens nos rios e na vida aquática. A jornada pelo Iguaçu continua...', 
         nextPhaseId: '5' 
-      }
-    }
-  ]
-},
-{
-  id: '3',
-  title: 'FASE 3 — Ponte Histórica',
-  startScreenId: 'intro',
-  screens: [
-    {
-      id: 'intro',
-      title: 'Um Encontro sob o Gigante de Ferro',
-      backgroundUrl: ponte,
-      speaker: 'NARRADOR',
-      texts: [
-        'A noite cai sobre as cidades-gêmeas de União da Vitória e Porto União.',
-        'Sob os arcos da imponente Ponte Machado da Costa, o mundo é feito de sombras e do som constante da água do Rio Iguaçu.',
-        'Perto de um dos pilares, um focinho farejador surge, seguido por uma casca blindada.',
-        'Um Tatu-galinha começa seu forrageio noturno. Ele para ao sentir sua presença.'
-      ],
-      choices: [
-        { label: 'Observar o tatu', toScreenId: 'encontro_richard' }
-      ]
-    },
-    {
-      id: 'encontro_richard',
-      title: 'Richard',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'RICHARD',
-      texts: [
-        'Oh. Olá. Desculpe, eu não esperava companhia.',
-        'Meu nome é Richard. Eu moro aqui, neste solo.',
-        'Para mim, a história desta cidade não está nos livros, mas aqui embaixo, nas camadas de terra que eu escavo toda noite.'
-      ],
-      choices: [
-        // Todas as escolhas pulam as reações e vão direto para a próxima cena
-        { label: 'Prazer, Richard. Não quis assustá-lo.', toScreenId: 'rio_zangado' },
-        { label: 'O que a terra conta para você?', toScreenId: 'rio_zangado' },
-        { label: 'É um lugar interessante para se morar.', toScreenId: 'rio_zangado' },
-        { label: 'Um tatu-galinha! Que animal incrível.', toScreenId: 'rio_zangado' }
-      ]
-    },
-    // Telas 'resposta_assustar', 'resposta_terra_conta', 'resposta_interessante', 'resposta_incrivel' REMOVIDAS
-    {
-      id: 'rio_zangado',
-      title: 'O Rio Zangado',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'NARRADOR',
-      texts: [
-        'Richard enfia o focinho na terra e remexe por um instante.',
-        'Enquanto come, ele parece se lembrar de algo, como se o gosto da terra trouxesse memórias.'
-      ],
-      choices: [
-        { label: 'Ouvir Richard', toScreenId: 'richard_cheia' }
-      ]
-    },
-    {
-      id: 'richard_cheia',
-      title: 'A Grande Cheia',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'RICHARD',
-      texts: [
-        'Este solo é diferente. Embaixo da terra seca, existe uma camada grossa de areia.',
-        'Meus avós contaram. Foi de uma vez em que o rio se cansou de ser pequeno e decidiu visitar a cidade inteira.',
-        'Uma "grande cheia". Ele quis mostrar até onde ia seu verdadeiro quintal.'
-      ],
-      choices: [
-        // Todas as escolhas pulam as reações e vão direto para a próxima cena
-        { label: 'Você está falando de uma grande inundação?', toScreenId: 'margens_parede' },
-        { label: 'O rio quis mostrar seu poder, então.', toScreenId: 'margens_parede' },
-        { label: 'Isso deve ter sido aterrorizante para os animais da época.', toScreenId: 'margens_parede' },
-        { label: 'E essas marcas ainda estão aqui, debaixo dos nossos pés?', toScreenId: 'margens_parede' }
-      ]
-    },
-    // Telas 'resposta_inundacao', 'resposta_poder', 'resposta_aterrorizante', 'resposta_marcas' REMOVIDAS
-    {
-      id: 'margens_parede',
-      title: 'As Margens que Viraram Parede',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'NARRADOR',
-      texts: [
-        'Richard caminha até a beira do rio.',
-        'A margem aqui não é de terra fofa, mas de lajotas de concreto e uma parede baixa, uma contenção.'
-      ],
-      choices: [
-        { label: 'Observar', toScreenId: 'richard_concreto' }
-      ]
-    },
-    {
-      id: 'richard_concreto',
-      title: 'Pedra Dura e Estéril',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'RICHARD',
-      texts: [
-        'Depois da grande cheia, os humanos ficaram com medo. E o medo os fez construir isso. Paredes.',
-        'Eles acham que podem colocar o rio em uma caixa.',
-        'Antes, a margem era suave, havia barrancos para eu cavar. Agora... é só pedra dura e estéril.'
-      ],
-      choices: [
-        // Todas as escolhas pulam as reações e vão direto para a próxima cena
-        { label: 'Eles fizeram isso para proteger a cidade, eu imagino.', toScreenId: 'tesouros_nao_alimentam' },
-        { label: 'Então você perdeu sua casa por causa disso?', toScreenId: 'tesouros_nao_alimentam' },
-        { label: 'A margem de um rio é um lugar cheio de vida, não é?', toScreenId: 'tesouros_nao_alimentam' },
-        { label: 'O concreto parece tão fora de lugar aqui.', toScreenId: 'tesouros_nao_alimentam' }
-      ]
-    },
-    // Telas 'resposta_proteger', 'resposta_perdeu_casa', 'resposta_margem_vida', 'resposta_fora_lugar' REMOVIDAS
-    {
-      id: 'tesouros_nao_alimentam',
-      title: 'Tesouros que Não Alimentam',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'NARRADOR',
-      texts: [
-        'Enquanto fareja perto da parede de concreto, Richard cava rapidamente e desenterra algo que brilha: uma tampa de garrafa enferrujada.',
-        'Ele a cheira e a empurra para o lado com desdém.'
-      ],
-      choices: [
-        { label: 'Observar', toScreenId: 'richard_lixo' }
-      ]
-    },
-    {
-      id: 'richard_lixo',
-      title: 'Camadas de Lixo',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'RICHARD',
-      texts: [
-        'Veem? Outro tipo de marca que os humanos deixam.',
-        'Embaixo, a areia da grande cheia. Mais para cima, cacos de vidro e metais enferrujados.',
-        'Eu cavo em busca de vida, de larvas. E encontro o lixo de vocês.',
-        'Tesouros que não alimentam.'
-      ],
-      choices: [
-        // Todas as escolhas pulam as reações e vão direto para a próxima cena
-        { label: 'É triste pensar que o lixo que jogamos fora fica enterrado por tanto tempo.', toScreenId: 'monstro_ruge' },
-        { label: 'Você já se machucou com alguma dessas coisas?', toScreenId: 'monstro_ruge' },
-        { label: 'O solo se tornou um arquivo da nossa poluição.', toScreenId: 'monstro_ruge' },
-        { label: 'É como se vocês tivessem que garimpar pela comida.', toScreenId: 'monstro_ruge' }
-      ]
-    },
-    // Telas 'resposta_enterrado', 'resposta_machucou', 'resposta_arquivo', 'resposta_garimpar' REMOVIDAS
-    {
-      id: 'monstro_ruge',
-      title: 'O Monstro que Ruge em Cima',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'NARRADOR',
-      texts: [
-        'Um caminhão pesado passa pela ponte.',
-        'Toda a estrutura de metal range e vibra.',
-        'Richard se encolhe, esperando o barulho passar.'
-      ],
-      choices: [
-        { label: 'Observar', toScreenId: 'richard_barulho' }
-      ]
-    },
-    {
-      id: 'richard_barulho',
-      title: 'Rio de Metal',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'RICHARD',
-      texts: [
-        'Este é o outro rio. O rio de metal e borracha que corre sobre nós. Ele nunca dorme.',
-        'Suas luzes fortes confundem os insetos noturnos, que são meu alimento.',
-        'A ponte une as cidades de vocês, mas cria um muro mortal para nós.'
-      ],
-      choices: [
-        // Todas as escolhas pulam as reações e vão direto para a próxima cena
-        { label: 'A poluição sonora e luminosa é um problema que nem notamos.', toScreenId: 'ponte_testemunha' },
-        { label: 'O progresso humano muitas vezes ignora a vida selvagem.', toScreenId: 'ponte_testemunha' },
-        { label: 'Deve ser muito estressante viver com esse barulho constante.', toScreenId: 'ponte_testemunha' },
-        { label: 'As estradas são como rios perigosos para vocês.', toScreenId: 'ponte_testemunha' }
-      ]
-    },
-    // Telas 'resposta_poluicao_sonora', 'resposta_progresso', 'resposta_estressante', 'resposta_estradas' REMOVIDAS
-    {
-      id: 'ponte_testemunha',
-      title: 'A Ponte como Testemunha',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'NARRADOR',
-      texts: [
-        'O tatu-galinha olha para cima, para o emaranhado de vigas de ferro.',
-        'Sua irritação parece dar lugar a um respeito relutante.'
-      ],
-      choices: [
-        { label: 'Ouvir', toScreenId: 'richard_ponte' }
-      ]
-    },
-    {
-      id: 'richard_ponte',
-      title: 'Velha Senhora de Ferro',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'RICHARD',
-      texts: [
-        'Mas sabe... eu respeito esta velha senhora de ferro.',
-        'Ela está aqui há muito tempo. Ela viu a "grande cheia".',
-        'Ela me dá um teto, mesmo que barulhento.',
-        'Ela é uma testemunha silenciosa. O que você acha que ela diria se pudesse falar?'
-      ],
-      choices: [
-        // Todas as escolhas pulam as reações e vão direto para a próxima cena
-        { label: 'Talvez ela pedisse mais cuidado com o rio que passa sob ela.', toScreenId: 'vida_espacos_sobrantes' },
-        { label: 'Ela contaria histórias de todos que já a atravessaram.', toScreenId: 'vida_espacos_sobrantes' },
-        { label: 'Acho que ela diria que viu coisas demais.', toScreenId: 'vida_espacos_sobrantes' },
-        { label: 'Talvez ela se sentisse orgulhosa e cansada ao mesmo tempo.', toScreenId: 'vida_espacos_sobrantes' }
-      ]
-    },
-    // Telas 'resposta_cuidado_rio', 'resposta_historias', 'resposta_viu_demais', 'resposta_orgulhosa_cansada' REMOVIDAS
-    {
-      id: 'vida_espacos_sobrantes',
-      title: 'A Vida nos Espaços Sobrantes',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'NARRADOR',
-      texts: [
-        'Richard volta a farejar o chão, movendo-se com eficiência.',
-        'Ele se esgueira por entre uma moita de capim que teima em crescer numa fresta do concreto.'
-      ],
-      choices: [
-        { label: 'Observar', toScreenId: 'richard_frestas' }
-      ]
-    },
-    {
-      id: 'richard_frestas',
-      title: 'Especialistas em Invisibilidade',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'RICHARD',
-      texts: [
-        'Nosso mundo encolheu. Então aprendemos a viver nas sobras. Nas frestas. Embaixo de pontes.',
-        'Nos tornamos especialistas em invisibilidade.',
-        'Mas viver escondido não é a mesma coisa que viver em paz.',
-        'Você acha que os humanos percebem que existimos nesses pequenos bolsões de vida?'
-      ],
-      choices: [
-        // Todas as escolhas pulam as reações e vão direto para a próxima cena
-        { label: 'Acho que a maioria não faz a menor ideia.', toScreenId: 'sabedoria_pequeno' },
-        { label: 'Algumas pessoas sim, as que prestam mais atenção.', toScreenId: 'sabedoria_pequeno' },
-        { label: 'É impressionante como a vida encontra um caminho.', toScreenId: 'sabedoria_pequeno' },
-        { label: 'Talvez se vocês fossem mais vistos, seriam mais respeitados.', toScreenId: 'sabedoria_pequeno' }
-      ]
-    },
-    // Telas 'resposta_nao_ideia', 'resposta_algumas_pessoas', 'resposta_impressionante_vida', 'resposta_mais_vistos' REMOVIDAS
-    {
-      id: 'sabedoria_pequeno',
-      title: 'A Sabedoria de Ser Pequeno',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'NARRADOR',
-      texts: [
-        'Richard para e se senta sobre as patas traseiras.',
-        'Ele parece pequeno e vulnerável sob a imensidão da ponte.'
-      ],
-      choices: [
-        { label: 'Ouvir', toScreenId: 'richard_pequeno' }
-      ]
-    },
-    {
-      id: 'richard_pequeno',
-      title: 'Ser Pequeno',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'RICHARD',
-      texts: [
-        'Eu sou pequeno. Minha vida é cavar, comer insetos, me esconder.',
-        'Eu vejo essas mudanças imensas, as paredes, a poluição, o barulho... e me sinto impotente.',
-        'O que a ação de um ser tão pequeno como eu pode fazer para mudar algo tão grande?'
-      ],
-      choices: [
-        // Todas as escolhas pulam as reações e vão direto para a próxima cena
-        { label: 'Você mantém o solo saudável. Isso já é uma grande coisa.', toScreenId: 'cheiro_chuva' },
-        { label: 'Talvez o seu papel seja ser uma testemunha, um guardião da história.', toScreenId: 'cheiro_chuva' },
-        { label: 'Muitos pequenos juntos podem fazer uma grande mudança.', toScreenId: 'cheiro_chuva' },
-        { label: 'Você sobrevive. E isso, por si só, é um ato de resistência.', toScreenId: 'cheiro_chuva' }
-      ]
-    },
-    // Telas 'resposta_solo_saudavel', 'resposta_testemunha', 'resposta_juntos', 'resposta_sobrevive' REMOVIDAS
-    {
-      id: 'cheiro_chuva',
-      title: 'O Cheiro da Chuva',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'NARRADOR',
-      texts: [
-        'O vento muda, trazendo o cheiro de chuva e de terra molhada.',
-        'Richard levanta o focinho e aspira o ar.'
-      ],
-      choices: [
-        { label: 'Observar', toScreenId: 'richard_chuva' }
-      ]
-    },
-    {
-      id: 'richard_chuva',
-      title: 'Chuva que Traz Sujeira',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'RICHARD',
-      texts: [
-        'A chuva está vindo. Para mim, chuva é vida. Traz as minhocas.',
-        'Mas aqui, ela também traz preocupação.',
-        'Ela lava toda a sujeira da cidade, o óleo dos carros, o lixo das ruas, e joga tudo dentro do rio.',
-        'A chuva que deveria ser limpa se torna uma sopa de poluição.'
-      ],
-      choices: [
-        // Todas as escolhas pulam as reações e vão direto para a próxima cena
-        { label: 'É o ciclo da natureza sendo usado para espalhar a sujeira humana.', toScreenId: 'amanhecer_retirada' },
-        { label: 'Então, para o rio, a chuva se tornou um problema?', toScreenId: 'amanhecer_retirada' },
-        { label: 'Tudo está conectado, não é? A cidade, o rio, o ar...', toScreenId: 'amanhecer_retirada' },
-        { label: 'Existe algo que se possa fazer para a chuva voltar a ser só... chuva?', toScreenId: 'amanhecer_retirada' }
-      ]
-    },
-    // Telas 'resposta_ciclo', 'resposta_problema_chuva', 'resposta_conectado', 'resposta_solucao_chuva' REMOVIDAS
-    {
-      id: 'amanhecer_retirada',
-      title: 'O Amanhecer e a Retirada',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'NARRADOR',
-      texts: [
-        'No horizonte, o céu começa a clarear, anunciando o fim da noite.',
-        'Richard caminha de volta para a entrada de sua toca, um buraco discreto na terra escura.'
-      ],
-      choices: [
-        { label: 'Despedir-se', toScreenId: 'richard_despedida' }
-      ]
-    },
-    {
-      id: 'richard_despedida',
-      title: 'Camadas Mais Gentis',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'RICHARD',
-      texts: [
-        'Minha hora acabou. O sol pertence a vocês. Eu volto para o silêncio da terra.',
-        'Obrigado por me ouvir. É raro que alguém pare para escutar a história que o chão tem para contar.',
-        'Por favor, quando andar pela cidade, lembre-se que você está caminhando sobre muitas outras histórias.',
-        'E ajude a escrever uma camada mais gentil no futuro.'
-      ],
-      choices: [
-        // Todas as escolhas levam para uma tela final consolidada
-        { label: 'Obrigado por compartilhar suas histórias, Richard.', toScreenId: 'final_consolidado' },
-        { label: 'Eu vou prestar mais atenção ao chão sob meus pés.', toScreenId: 'final_consolidado' },
-        { label: 'Sua perspectiva me ensinou muito.', toScreenId: 'final_consolidado' },
-        { label: 'Tenha um bom descanso. O mundo aqui de cima fica aos nossos cuidados.', toScreenId: 'final_consolidado' }
-      ]
-    },
-    // Telas 'final_historias', 'final_atencao', 'final_perspectiva', 'final_cuidados' REMOVIDAS
-    {
-      id: 'final_consolidado',
-      title: 'O Guardião do Subsolo',
-      backgroundUrl: ponte,
-      characterUrl: tatu,
-      speaker: 'RICHARD',
-      texts: [
-        'Fico feliz. As histórias só têm valor quando são compartilhadas.',
-        'Saber que você prestará atenção me faz descansar mais tranquilo.',
-        'Cuidem bem do nosso teto.'
-      ],
-      result: { 
-        title: 'Fase 4 Concluída — O Historiador do Subsolo', 
-        summary: 'Você conheceu Richard e aprendeu sobre a vida urbana vista de baixo, os impactos das construções e a resiliência dos pequenos. A jornada final aguarda...', 
-        nextPhaseId: '4' 
       }
     }
   ]
